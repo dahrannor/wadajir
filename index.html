@@ -3,76 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Clone</title>
+    <title>Cafe Street</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-    <!-- Navbar -->
-    <header class="bg-blue-600 text-white p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">Facebook</div>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:underline">Home</a></li>
-                    <li><a href="#" class="hover:underline">Friends</a></li>
-                    <li><a href="#" class="hover:underline">Messages</a></li>
-                </ul>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-orange-500">Cafe Street</div>
+            <nav class="space-x-6">
+                <a href="#" class="text-gray-700 hover:text-orange-500">About us</a>
+                <a href="#" class="text-gray-700 hover:text-orange-500">Our Product</a>
+                <a href="#" class="text-gray-700 hover:text-orange-500">Delivery</a>
             </nav>
+            <input type="text" placeholder="Search" class="border rounded-full px-4 py-1 text-gray-600 focus:outline-none">
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto mt-6 flex gap-6">
-        <!-- Sidebar -->
-        <aside class="w-1/4 bg-white p-4 rounded-lg shadow">
-            <h2 class="text-xl font-semibold mb-4">Shortcuts</h2>
-            <ul class="space-y-2">
-                <li><a href="#" class="text-blue-600 hover:underline">Groups</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Marketplace</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Events</a></li>
-            </ul>
-        </aside>
-
-        <!-- Feed -->
-        <section class="w-2/4">
-            <!-- Post Form -->
-            <div class="bg-white p-4 rounded-lg shadow mb-6">
-                <textarea placeholder="What's on your mind?" class="w-full border border-gray-300 rounded-lg p-3 resize-none focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
-                <button class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Post</button>
+    <main class="container mx-auto px-6 py-8">
+        <!-- Hero Section -->
+        <div class="bg-white p-6 rounded-lg shadow-lg flex justify-between items-center">
+            <div>
+                <h1 class="text-4xl font-bold text-gray-800">Enjoy your <span class="text-orange-500">coffee</span> before your activity</h1>
+                <p class="text-gray-600 mt-4">Boost your productivity and build your mood with a glass of coffee in the morning</p>
+                <div class="mt-6">
+                    <button class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600">Order now</button>
+                    <a href="#" class="ml-4 text-orange-500 hover:underline">More menu</a>
+                </div>
             </div>
+            <div class="relative">
+                <img src="first.jpg" alt="Cappuccino" class="rounded-[20px] shadow-lg">
+                <div class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 bg-white px-3 py-1 rounded-full shadow-md text-sm">Cappuccino</div>
+                <div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4 bg-orange-500 text-white px-3 py-1 rounded-full shadow-md text-sm">4.8 ⭐</div>
+                <div class="absolute bottom-0 right-0 transform translate-x-4 translate-y-4 bg-white px-3 py-1 rounded-full shadow-md text-sm">18K</div>
+            </div>
+        </div>
 
-            <!-- Posts -->
-            <div class="bg-white p-4 rounded-lg shadow mb-6">
-                <div class="flex items-start space-x-4">
-                    <img src="https://via.placeholder.com/40" alt="User" class="rounded-full">
-                    <div>
-                        <h3 class="font-semibold">John Doe</h3>
-                        <p class="text-gray-600 text-sm">Just now</p>
+        <!-- Popular Now Section -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-800">Popular Now</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <!-- Vanilla Latte -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="vanilla.jpg" alt="Vanilla Latte" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Vanilla Latte</h3>
+                    <p class="text-gray-600 mt-2">21K</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">Hot</span>
+                        <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-xs">Cold</span>
                     </div>
                 </div>
-                <p class="mt-4">This is an example post on the feed.</p>
-                <div class="mt-4 flex space-x-4">
-                    <button class="text-blue-600 hover:underline">Like</button>
-                    <button class="text-blue-600 hover:underline">Comment</button>
-                    <button class="text-blue-600 hover:underline">Share</button>
+                <!-- Espresso -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="espresso.jpg" alt="Espresso" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Espresso</h3>
+                    <p class="text-gray-600 mt-2">12K</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">Hot</span>
+                        <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-xs">Cold</span>
+                    </div>
+                </div>
+                <!-- Hazelnut Latte -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="peanut.jpg" alt="Hazelnut Latte" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Hazelnut Latte</h3>
+                    <p class="text-gray-600 mt-2">23K</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">Hot</span>
+                        <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-xs">Cold</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Second one -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- How to Use Delivery Section -->
+        <section class="text-center">
+            <h2 class="text-2xl font-bold text-gray-800">How to use delivery <span class="text-orange-500">service</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="vanilla.jpg" alt="Choose Coffee" class="mx-auto">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Choose your coffee</h3>
+                    <p class="text-gray-600 mt-2">There are 20+ coffees for you</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="delivery.jpg" alt="Delivery" class="mx-auto">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">We deliver it to you</h3>
+                    <p class="text-gray-600 mt-2">Choose delivery service</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="2nd.jpg" alt="Enjoy Coffee" class="mx-auto">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Enjoy your coffee</h3>
+                    <p class="text-gray-600 mt-2">Choose delivery service</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contacts -->
-        <aside class="w-1/4 bg-white p-4 rounded-lg shadow">
-            <h2 class="text-xl font-semibold mb-4">Contacts</h2>
-            <ul class="space-y-4">
-                <li class="flex items-center space-x-3">
-                    <img src="https://via.placeholder.com/40" alt="User" class="rounded-full">
-                    <span>Jane Smith</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <img src="https://via.placeholder.com/40" alt="User" class="rounded-full">
-                    <span>Robert Johnson</span>
-                </li>
-            </ul>
-        </aside>
+        <!-- About Us Section -->
+        <section class="mt-12 bg-white p-6 rounded-lg shadow-lg">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2">
+                    <img src="about.jpg" alt="Coffee Cup" class="rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 md:ml-8 mt-6 md:mt-0">
+                    <h2 class="text-2xl font-bold text-gray-800">About <span class="text-orange-500">us</span></h2>
+                    <p class="text-gray-600 mt-4">We provide quality coffee, and are ready to deliver. We are a company that makes and distributes delicious drinks. Our main product is made with a secret recipe and is available in stores worldwide.</p>
+                    <button class="mt-6 bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600">Get your coffee</button>
+                </div>
+            </div>
+        </section>
     </main>
+    <!-- Third one -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Special Menu Section -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-800">Special menu for <span class="text-orange-500">you</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6">
+                <!-- Menu Items -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="sandwitch.jpg" alt="Sandwich" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Sandwich</h3>
+                    <p class="text-gray-600">Bread with meat and vegetables</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-gray-800 font-bold">12K</span>
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">4.8 ⭐</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="hotmilk.jpg" alt="Hot Milk" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Hot Milk</h3>
+                    <p class="text-gray-600">Hot milk with less sugar</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-gray-800 font-bold">12K</span>
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">4.8 ⭐</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="coffea.jpg" alt="Coffee Ice Cream" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Coffee Ice Cream</h3>
+                    <p class="text-gray-600">Coffee with ice cream vanilla</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-gray-800 font-bold">12K</span>
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">4.8 ⭐</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="espresso.jpg" alt="Cappuccino" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Cappuccino</h3>
+                    <p class="text-gray-600">Hot cappuccino</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-gray-800 font-bold">12K</span>
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">4.8 ⭐</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="peanut.jpg" alt="Mocaccino" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Mocaccino</h3>
+                    <p class="text-gray-600">Hot mocaccino</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-gray-800 font-bold">12K</span>
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">4.8 ⭐</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="vanilla.jpg" alt="Waffle Ice Cream" class="w-full h-40 rounded-lg">
+                    <h3 class="mt-4 text-lg font-bold text-gray-800">Waffle Ice Cream</h3>
+                    <p class="text-gray-600">Waffle with ice cream</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-gray-800 font-bold">12K</span>
+                        <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">4.8 ⭐</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Last section -->
+    <section class="bg-yellow-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">What they say about us</h2>
+                <p class="text-gray-600 mt-2">We always provide the best service and always maintain the quality of coffee</p>
+            </div>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-full md:w-1/3 p-4">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <img src="women.jpg" alt="Naura" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 text-center">Naura</h3>
+                        <p class="text-gray-600 text-center mt-2">I really love the cappuccino, the coffee was very smooth</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <img src="man.jpg" alt="John" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 text-center">John</h3>
+                        <p class="text-gray-600 text-center mt-2">This coffee shop is very convenient</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 p-4">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <img src="dr.jpg" alt="Azura" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 text-center">Azura</h3>
+                        <p class="text-gray-600 text-center mt-2">The coffee menu here is very much</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white mb-8">
+                <h2 class="text-3xl font-bold">Subscribe to get 50% discount price</h2>
+            </div>
+            <div class="flex flex-col items-center">
+                <input type="email" placeholder="Email address" class="w-full md:w-1/2 px-4 py-2 border border-gray-300 rounded-md mb-4">
+                <button class="bg-brown-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded-md">Order now</button>
+            </div>
+            <div class="relative mt-8">
+                <img src="sandwitch.jpg" alt="Coffee Machine" class="w-[1263px] h-[400px] object-cover rounded">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
